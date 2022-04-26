@@ -1,0 +1,165 @@
+/* @import url('https://fonts.googleapis.com/csss?family=Poppins:wght@400;@500;@600;@700&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #3c87ff;
+    overflow: hidden;
+}
+
+.wrapper{
+    background: white;
+    max-width: 405px;
+    margin: 135px auto;
+    border-radius: 7px;
+    padding: 28px 0;
+}
+
+.task-input{
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.task-input img{
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    bottom: 40px;
+    width: 25px;
+    height: 25px;
+}
+
+.task-input input{
+    height: 100%;
+    width: 100%;
+    padding:  0 20px 0 53px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 1px solid #999;
+    outline: none;
+}
+
+.task-input input::placeholder{
+    color: #bfbfbf;
+}
+
+.controls, li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls{
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.filters span{
+    margin:0 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.filters span:first-child{
+    margin-left: 0;
+}
+
+.filters span.active{
+    color: #3c87ff;
+}
+
+.controls .clear-btn{
+    outline: none;
+    border: none;
+    background: #3c87ff;
+    color: white;
+    padding: 7px 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.task-box{
+    margin: 20px 25px;
+}
+
+.task-box .task{
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+}
+
+.task-box .task:last-child{
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.task label{
+    display: flex;
+}
+
+.task label p.checked{
+    text-decoration: line-through;
+    color: dimgrey;
+}
+
+.task label input{
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+.task .settings{
+    cursor: pointer;
+    position: relative;
+}
+
+/* .settings .uil-ellipsis-h{
+    color: lawngreen;
+} */
+
+.settings .task-menu{
+    background: white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    right: -5px;
+    transform: scale(0);
+    bottom: -65px;
+    padding: 5px 0;
+    position: absolute;
+    border-radius: 5px;
+    transform-origin: top right;
+    transition: transform 0.2s ease;
+}
+
+.settings .task-menu.show{
+    transform: scale(1);
+}
+
+.task-menu li{
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    justify-content: flex-start;
+    padding: 17px 15px;
+}
+
+.task-menu li:last-child{
+    margin-bottom: 0;
+}
+
+.task-menu li:hover {
+    background: #f5f5f5;
+}
+
+.task-menu li img{
+    padding-right: 8px;
+}
